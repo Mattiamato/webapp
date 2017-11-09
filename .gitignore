@@ -1,0 +1,8 @@
+.mvn/
+target/classes/static/js/vue.min.js
+.settings/
+target/
+.classpath
+mvnw
+mvnw.cmd
+.project
