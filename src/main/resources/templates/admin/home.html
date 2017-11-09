@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Admin Page</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/home.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/css/tether.min.css}" />
+	<script type="text/javascript" th:src="@{/js/jquery-3.2.1.min.js}"></script>
+  	<script type="text/javascript" th:src="@{/js/tether.min.js}"></script>
+  	<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+
+<body>
+	<div class="container">
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+		  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <a class="navbar-brand" href="#">Web App</a>
+		
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+		      <li class="nav-item active">
+		        <a class="nav-link" th:href="@{/home}">Home <span class="sr-only">(current)</span></a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">UselessLink</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link disabled" href="#">Disabled</a>
+		      </li>
+		    </ul>
+
+			<span class="navbar-text" th:utext="${userName}"></span>
+		    
+		    <form th:action="@{/logout}" method="get" class="my-2 my-lg-0">
+				<button class="btn btn-md btn-danger btn-block my-2 my-sm-0" name="registration"
+					type="Submit">Logout</button>
+			</form>  
+		  </div>
+		</nav>
+		
+
+		<div class="row">
+			<div class="col">
+				<p class="admin-message-text text-center" th:utext="${adminMessage}"></p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
